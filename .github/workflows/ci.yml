@@ -35,6 +35,11 @@ jobs:
       - name: Configure Git safe directory with GITHUB_WORKSPACE
         run: git config --global --add safe.directory $GITHUB_WORKSPACE
         
+      - name: Create Print Version TeX
+        run: |
+          cp Karteikarten/eum_karten.tex Karteikarten/eum_karten_print.tex
+          sed -i 's/\\documentclass\[a7paper\]/\\documentclass[a7paper,print]/' Karteikarten/eum_karten_print.tex
+
       - name: Build
         run: |
           cmake --version; pdflatex --version

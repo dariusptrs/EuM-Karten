@@ -19,3 +19,7 @@ set(IMAGE_DIRS
 add_latex_document(Karteikarten/eum_karten.tex FORCE_PDF INCLUDE_DIRECTORIES
                    ${CMAKE_CURRENT_SOURCE_DIR}/Karteikarten/kartei DEPENDS writegitid)
 
+# Print version
+add_latex_document(Karteikarten/eum_karten_print.tex FORCE_PDF INCLUDE_DIRECTORIES
+                   ${CMAKE_CURRENT_SOURCE_DIR}/Karteikarten/kartei DEPENDS writegitid)
+
