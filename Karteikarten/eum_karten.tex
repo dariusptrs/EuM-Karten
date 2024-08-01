@@ -1,0 +1,391 @@
+% Karteikarten mit Formeln aus der Vorlesung Elektrizität und Magnetismus
+% bei Prof. Schrag im SS24
+% an der TU München
+%
+%		* ----------------------------------------------------------------------------
+%		* "THE BEER-WARE LICENSE" (Revision 42/023):
+%		* Ronny Bergmann <mail@darkmoonwolf.de> wrote this file. As long as you retain
+%		* this notice you can do whatever you want with this stuff. If we meet some day,
+%		* and you think  this stuff is worth it, you can buy me a beer or a coffee in return.
+%		* ----------------------------------------------------------------------------
+%
+
+\documentclass[a7paper]{kartei}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc} %UTF8
+
+\begin{document}
+
+\setlength{\parindent}{0pt} %Am Anfang einer neuen Zeile nicht einrücken
+
+% Karte 1: Coulomb’sches Gesetz
+\begin{karte}[Elektrostatik]{Coulomb’sches Gesetz}
+Kraft auf \( q \) durch \( q_i \)
+
+\[
+\vec{F}(\vec{r}) = \sum_{i=1}^{N} \frac{q q_i}{4\pi\epsilon} \cdot \frac{\vec{r} - \vec{r}_i}{|\vec{r} - \vec{r}_i|^3}
+\]
+
+\([F] = \text{N} = \frac{\text{kg} \cdot \text{m}}{\text{s}^2}\)
+\end{karte}
+
+% Karte 2: Elektrische Feldstärke
+\begin{karte}[Elektrostatik]{Elektrische Feldstärke}
+Feld, durch das \( q \) Kraft \( \vec{F} \) erfährt
+
+\[
+\vec{E}(\vec{r}) = \frac{\vec{F}(\vec{r})}{q}
+\]
+
+\([E] = \frac{\text{V}}{\text{m}} = \frac{\text{kg} \cdot \text{m}}{\text{A} \cdot \text{s}^3}\)
+\end{karte}
+
+% Karte 3: Elektrische Arbeit
+\begin{karte}[Elektrostatik]{Elektrische Arbeit}
+Arbeit, um Punktladung von \( P_1 \) nach \( P_2 \) zu bringen
+
+\[
+W_{12} = \int_{C(P_1, P_2)} \vec{F}(\vec{r}) \, \mathrm{d}\vec{r}
+\]
+
+\([W] = \text{J} = \text{Nm} = \frac{\text{kg} \cdot \text{m}^2}{\text{s}^2}\)
+\end{karte}
+
+% Karte 4: Grundgesetz der Elektrostatik
+\begin{karte}[Elektrostatik]{Grundgesetz der Elektrostatik}
+Elektrostatische Felder sind konservativ:
+
+\[
+\oint_C \vec{E} \, \mathrm{d}\vec{r} = 0
+\]
+
+\[
+\int_{P_1}^{P2} \vec{E} \, \mathrm{d}\vec{r} = \text{const.}
+\]
+
+\[\text{rot} \, \vec{E} = \nabla \times \vec{E} = 0\]
+
+\end{karte}
+
+% Karte 5: Elektrisches Potential
+\begin{karte}[Elektrostatik]{Elektrisches Potential}
+
+\[
+\Phi(\vec{r}) = \Phi(\vec{r_0}) - \int_{P_0}^{P} \vec{E}(\vec{r}\ ') \, \mathrm{d}\vec{r} \ '
+\]
+\\
+\(
+\vec{r}_0 \text{: Referenzpotential (meist 0)}
+\)
+\\
+
+\([\Phi] = \text{V} = \frac{\text{kg} \cdot \text{m}^2}{\text{A} \cdot \text{s}^3}\)
+\end{karte}
+
+% Karte 6: Spannung zwischen zwei Punkten
+\begin{karte}[Elektrostatik]{Spannung zwischen zwei Punkten}
+\[
+U_{12} = \int_{P_1}^{P_2} \vec{E} \, \mathrm{d}\vec{r}
+\]
+
+\[
+U_{12} = \Phi(P_1) - \Phi(P_2) = -U_{21}
+\]
+
+\([U] = \text{V} = \frac{\text{kg} \cdot \text{m}^2}{\text{A} \cdot \text{s}^3}\)
+\end{karte}
+
+% Karte 7: Elektrische Feldkonstante
+\begin{karte}[Elektrostatik]{Elektrische Feldkonstante}
+\[
+\epsilon = \epsilon_0 \epsilon_r
+\]
+
+\[
+\epsilon_0 = 8.854188 \times 10^{-12} \, \frac{\text{As}}{\text{Vm}}
+\]
+
+\[
+\epsilon_0 = 8.854188 \times 10^{-12} \, \frac{\text{A}^2\text{s}^4}{\text{kg} \cdot \text{m}^3}
+\]
+\end{karte}
+
+% Karte 8: Elektrische Flussdichte
+\begin{karte}[Elektrostatik]{Dielektrisches Verschiebungsfeld}
+\[
+\vec{D}(\vec{r}) = \epsilon_0 \epsilon_r \vec{E}(\vec{r})
+\]
+
+\([D] = \frac{\text{As}}{\text{m}^2}\)
+\end{karte}
+
+% Karte 9: Raumladungsdichte
+\begin{karte}[Elektrostatik]{Raumladungsdichte}
+\[
+Q(V) = \int_V \rho(\vec{r}) \, \mathrm{d}^3r
+\]
+
+\([\rho] = \frac{\text{As}}{\text{m}^3}\)
+\end{karte}
+
+% Karte 10: Oberflächenladungsdichte
+\begin{karte}[Elektrostatik]{Oberflächenladungsdichte}
+\[
+Q(S) = \int_S \sigma(\vec{r}) \, \mathrm{d}a
+\]
+
+\[
+\sigma = \vec{D} \cdot \vec{N}
+\]
+
+\([\sigma] = \frac{\text{As}}{\text{m}^2}\)
+\end{karte}
+
+% Karte 11: Gaußsches Gesetz
+\begin{karte}[Elektrostatik]{Gaußsches Gesetz}
+\center 1. Maxwellgleichung
+\\
+\[
+\int_{\partial V} \vec{D} \, \mathrm{d}\vec{a} = Q(V) = \int_{V} \rho \, \mathrm{d}V
+\]
+
+\[
+\text{div} \, \vec{D} = \rho
+\]
+
+Herleitung mit Satz von Gauß.
+\end{karte}
+
+% Karte 12: Poissongleichung
+\begin{karte}[Elektrostatik]{Poissongleichung}
+\[
+\text{div} (\epsilon \nabla \Phi) = -\rho
+\]
+\end{karte}
+
+% Karte 13: Kapazität
+\begin{karte}[Elektrostatik]{Kapazität}
+\[
+C = \frac{Q}{U_{12}}
+\]
+
+\([C] = \text{F} = \frac{\text{As}}{\text{V}} = \frac{\text{A}^2\text{s}^4}{\text{kg} \cdot \text{m}^2}\)
+\end{karte}
+
+% Karte 14: Kondensatoren
+\begin{karte}[Elektrostatik]{Kondensatoren}
+Plattenkondensator:
+\[
+C_P = \epsilon \frac{A}{d}
+\]
+
+Kugelkondensator:
+\[
+C_K = 4\pi \epsilon \frac{ab}{b - a}
+\]
+\end{karte}
+
+% Karte 15: Kondensatorschaltungen
+\begin{karte}[Elektrostatik]{Kondensatorschaltungen}
+Parallelschaltung:
+\[
+C_{\text{par}} = \sum_{i=1}^{N} C_i
+\]
+
+Reihenschaltung:
+\[
+\frac{1}{C_{\text{rei}}} = \sum_{i=1}^{N} \frac{1}{C_i}
+\]
+\end{karte}
+
+% Karte 16: Dielektrika
+\begin{karte}[Elektrostatik]{Dielektrika}
+Parallelschaltung:
+\[
+C_P = C_1 + C_2 = \frac{\epsilon_1 A_1}{d} + \frac{\epsilon_2 A_2}{d}
+\]
+
+Reihenschaltung:
+\[
+C_R = \left(\frac{1}{C_1} + \frac{1}{C_2}\right)^{-1} = \left(\frac{d_1}{\epsilon_1 A} + \frac{d_2}{\epsilon_2 A}\right)^{-1}
+\]
+\end{karte}
+
+% Karte 17: Energie eines Kondensators
+\begin{karte}[Elektrostatik]{Energie eines Kondensators}
+\[
+W_{el} = \frac{1}{2} Q U = \frac{1}{2} C U^2
+\]
+
+\[
+W_{el} = \int_V w_{el} \, \mathrm{d}V
+\]
+
+\([W] = \text{J} = \frac{\text{kg} \cdot \text{m}^2}{\text{s}^2}\)
+\end{karte}
+
+% Karte 18: Energiedichte des E-Felds
+\begin{karte}[Elektrostatik]{Energiedichte des E-Felds}
+\[
+w_{el} = \frac{1}{2} \vec{E} \cdot \vec{D}
+\]
+
+\([w] = \frac{\text{J}}{\text{m}^3} = \frac{\text{kg}}{\text{m} \cdot \text{s}^2}\)
+\end{karte}
+
+% Karte 19: Stromstärke
+\begin{karte}[Stationäre Ströme]{Stromstärke}
+\[
+I = \frac{\mathrm{d}Q}{\mathrm{d}t}
+\]
+
+\([I] = \text{A}\)
+\end{karte}
+
+% Karte 20: Stromdichte
+\begin{karte}[Stationäre Ströme]{Stromdichte}
+\[
+I(S) = \int_S \vec{j} \, \mathrm{d}\vec{a}
+\]
+
+\[
+\vec{j} = q \cdot n \cdot \vec{v} = \rho \cdot \vec{v} = |q| \cdot n \cdot \mu \cdot \vec{E}
+\]
+
+\([j] = \frac{\text{A}}{\text{m}^2}\)
+\end{karte}
+
+% Karte 21: Ohmsches Gesetz
+\begin{karte}[Stationäre Ströme]{Ohmsches Gesetz}
+\[
+\vec{j} = \sigma \vec{E}
+\]
+
+\[
+I = G U
+\]
+\end{karte}
+
+% Karte 22: Verlustleistung
+\begin{karte}[Stationäre Ströme]{Verlustleistung}
+\[
+P_{el} = U I = \frac{U^2}{R} = R I^2
+\]
+
+\([P] = \text{W} = \text{V} \cdot \text{A} = \frac{\text{kg} \cdot \text{m}^2}{\text{s}^3}\)
+\end{karte}
+
+% Karte 23: Lorentzkraft
+\begin{karte}[Magnetostatik]{Lorentzkraft}
+\[
+\vec{F}_{L} = q \cdot (\vec{v} \times \vec{B})
+\]
+\[
+\mathrm{d}\vec{F}_{L} = I \cdot \mathrm{d}\vec{s} \times \vec{B}
+\]
+\\
+Elektromagnetische Kraft:
+\[
+\vec{F}_{em} = q (\vec{E} + \vec{v} \times \vec{B})
+\]
+\\
+\end{karte}
+
+% Karte 24: Drehmoment
+\begin{karte}[Magnetostatik]{Drehmoment}
+\[
+\vec{m} = I\vec{A}
+\]
+
+\[
+\vec{M} = \vec{m} \times \vec{B} = I \vec{A} \times \vec{B}
+\]
+
+\([M] = \text{Nm} = \frac{\text{kg} \cdot \text{m}^2}{\text{s}^2}\)
+\end{karte}
+
+% Karte 25: Quellenfreiheit des B-Feldes
+\begin{karte}[Magnetostatik]{Quellenfreiheit des B-Feldes}
+\center 3. Maxwellgleichung
+\\
+\[
+\int_{\partial V} \vec{B} \, \mathrm{d}\vec{a} = 0\]
+
+\[
+\text{div} \, \vec{B} = 0
+\]
+
+\([B] = \text{T} = \frac{\text{V} \cdot \text{s}}{\text{m}^2} = \frac{\text{kg}}{\text{A} \cdot \text{s}^2}\)
+\end{karte}
+
+% Karte 26: Ampèresches Durchflutungsgesetz
+\begin{karte}[Magnetostatik]{Ampèresches Durchflutungsgesetz}
+\center 4. Maxwellgleichung
+\\
+\[
+\int_{\partial A} \vec{H} \, \mathrm{d}\vec{s} = \int_A \left(\vec{j} + \frac{\partial \vec{D}}{\partial t}\right) \, \mathrm{d}\vec{a}
+\]
+
+\[
+\text{rot} \, \vec{H} = \vec{j} + \frac{\partial \vec{D}}{\partial t}
+\]
+
+\end{karte}
+
+% Karte 27: Magnetische Feldkonstante
+\begin{karte}[Magnetostatik]{Magnetische Feldkonstante}
+\[
+\mu = \mu_0 \mu_r
+\]
+
+\[
+\mu_0 = 4\pi \times 10^{-7} \, \frac{\text{Vs}}{\text{Am}}
+\]
+
+\[
+\mu_0 = 12.56637 \times 10^{-7} \, \frac{\text{kg} \cdot \text{m}}{\text{A}^2 \text{s}^2}
+\]
+\end{karte}
+
+% Karte 28: Magnetische Feldstärke
+\begin{karte}[Magnetostatik]{Magnetische Feldstärke}
+\[
+\vec{H} = \frac{1}{\mu} \vec{B}
+\]
+
+\([H] = \frac{\text{A}}{\text{m}}\)
+\end{karte}
+
+% Karte 29: Magnetischer Fluss
+\begin{karte}[Magnetostatik]{Magnetischer Fluss}
+\[
+\Phi = \int_A \vec{B} \, \mathrm{d}\vec{a}
+\]
+
+\([\Phi] = \text{Vs} = \frac{\text{kg} \cdot \text{m}^2}{\text{A} \cdot \text{s}^2}\)
+\end{karte}
+
+% Karte 30: Induktionsgesetz
+\begin{karte}[Magnetostatik]{Induktionsgesetz}
+\center 2. Maxwellgleichung
+\\
+\[
+\text{rot} \, \vec{E} = -\frac{\partial \vec{B}}{\partial t}
+\]
+\end{karte}
+
+% Karte 31: Induzierte Spannung
+\begin{karte}[Magnetostatik]{Induzierte Spannung}
+\textbf{Ruheinduktion}:
+
+\[
+U_{ind} = -\int_{A(t)} \frac{\partial \vec{B}}{\partial t} \, \mathrm{d}\vec{a} + \int_{\partial A} (\vec{v} \times \vec{B}) \, \mathrm{d}\vec{r}
+\]
+\textbf{Bewegungsinduktion}:
+\[
+U_{ind} = -\frac{\mathrm{d}}{\mathrm{d}t} \Phi(A(t))
+\]
+\end{karte}
+
+\end{document}
